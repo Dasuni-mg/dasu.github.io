@@ -210,9 +210,14 @@ nav.navbar.bootsnav .navbar-toggle i{color: #d92cf9;}
   margin-top: 50px;
   font-size: 50px;
   font-weight: 700;
-  
+  margin-bottom: 50px;
 }
 }
+
+.header-text a {
+  font-size: 60px;
+}
+
 .welcome-hero:before{
     position:absolute;
     content: " ";
