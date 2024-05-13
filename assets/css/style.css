@@ -212,11 +212,14 @@ nav.navbar.bootsnav .navbar-toggle i{color: #d92cf9;}
   font-weight: 700;
   margin-bottom: 50px;
 }
-}
 
 .header-text a {
-  font-size: 60px;
+margin-top: 60px;}
+
+
 }
+
+
 
 .welcome-hero:before{
     position:absolute;
