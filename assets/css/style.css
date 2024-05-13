@@ -242,7 +242,7 @@ nav.navbar.bootsnav .navbar-toggle i {
 
   /*.header-text-area*/
   .header-text h2 {
-    margin-left: 30px;
+    text-align: left;
     margin-top: 80px;
     font-size: 50px;
     font-weight: 700;
@@ -285,7 +285,7 @@ nav.navbar.bootsnav .navbar-toggle i {
   color: #1f2c6c;
   font-size: 20px;
   font-weight: 300;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   margin: 30px 1px0 60px;
   letter-spacing: 1px;
 }
@@ -479,7 +479,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {
 .section-heading h2 {
   font-size: 24px;
   font-weight: 600;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   padding-bottom: 50px;
   border-bottom: 1px solid #e5ebf2;
 }
