@@ -196,6 +196,23 @@ nav.navbar.bootsnav .navbar-toggle i{color: #d92cf9;}
     background-position: center;
     height:890px;
 }
+
+@media (max-width: 767px) {
+  .welcome-hero {
+    background:url(../images/about/mobile.jpg)no-repeat;
+    height:590px;
+  }
+
+  
+/*.header-text-area*/
+.header-text h2 {
+  margin-left: 30px;
+  margin-top: 50px;
+  font-size: 50px;
+  font-weight: 700;
+  
+}
+}
 .welcome-hero:before{
     position:absolute;
     content: " ";
