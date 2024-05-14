@@ -239,7 +239,9 @@ nav.navbar.bootsnav .navbar-toggle i {
     background: url(../images/about/mobile.jpg) no-repeat;
     height: 590px;
   }
-
+  .header-text {
+    text-align: left; /* Align all content to center */
+  }
   /*.header-text-area*/
   .header-text h2 {
     text-align: left;
@@ -258,16 +260,21 @@ nav.navbar.bootsnav .navbar-toggle i {
     padding-left: 25px;
     letter-spacing: 1px;
   }
- 
 
   .header-text a {
+    display: inline-block; /* Ensure link/button is displayed as block element */
     margin-top: 60px;
-    margin-left: -130px;
+    text-align: center;
+    width: 100%;
+    margin-left: 25px;
+  }
+  .education-horizontal-timeline {
+    padding: 0px 0;
   }
 
-  .education-horizontal-timeline {
-    /* padding: 80px 0; */
-}
+  .profiles-content {
+    padding-top: 0px;
+  }
 }
 
 .welcome-hero:before {
@@ -353,7 +360,7 @@ nav.navbar.bootsnav .navbar-toggle i {
   margin: 35px 0;
 }
 .single-about-add-info h3 {
-  color:#9f00ff;
+  color: #9f00ff;
   font-size: 16px;
   text-transform: capitalize;
 }
@@ -553,7 +560,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {
         7. Experience
 -------------------------------------*/
 .experience {
-  padding: 50px 0 ;
+  padding: 50px 0;
   border-top: 1px solid #e5ebf2;
 }
 .experience-content {
@@ -608,7 +615,6 @@ span.single-timeline-horizontal.spacial-horizontal-line {
 .timeline-content h4.title {
   font-size: 16px;
   font-weight: 400;
- 
 }
 .timeline-content h5 {
   color: #636a82;
