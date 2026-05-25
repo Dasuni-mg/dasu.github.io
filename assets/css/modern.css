@@ -31,8 +31,8 @@
 
     /* Text */
     --text-primary: #0f172a;
-    --text-secondary: #64748b;
-    --text-tertiary: #94a3b8;
+    --text-secondary: #475569;
+    --text-tertiary: #5e6d82;
 
     /* Borders & Shadows */
     --border-color: rgba(37, 99, 235, 0.08);
@@ -1437,4 +1437,27 @@ footer {
 
 .hero-image-container {
     animation: slideUp 0.8s var(--ease) 0.3s both;
+}
+
+/* ========================================
+   SKIP LINK — Accessibility
+   ======================================== */
+.skip-link {
+    position: fixed;
+    top: -100px;
+    left: 1rem;
+    background: var(--blue-600);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    z-index: 2000;
+    border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+    font-weight: 600;
+    transition: top 0.3s var(--ease);
+    box-shadow: var(--shadow-lg);
+}
+
+.skip-link:focus {
+    top: 0;
+    outline: 2px solid #fff;
+    outline-offset: -4px;
 }
