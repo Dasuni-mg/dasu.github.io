@@ -1,0 +1,3 @@
+## 2025-05-25 - [Accessibility & Micro-UX Polish]
+**Learning:** Even modern, visually polished portfolios can harbor significant accessibility gaps like missing skip links, insufficient color contrast (e.g., #94a3b8 on #f0f4f8), and lack of ARIA states for interactive mobile menus. These "micro-wins" significantly improve the experience for keyboard and screen reader users without altering the visual design intent.
+**Action:** Always check for Skip to Content links, verify contrast of tertiary text colors, and ensure interactive elements (like hamburgers) have ARIA attributes that update with state.
