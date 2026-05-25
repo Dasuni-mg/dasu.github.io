@@ -123,5 +123,13 @@ $(document).ready(function(){
             $(".header-text a").addClass("animated fadeInDown").css({'opacity':'0'});
         });
 
+	// 6. Theme Toggle
+		const checkbox = document.getElementById('checkbox');
+		if (checkbox) {
+			checkbox.addEventListener('change', () => {
+				document.body.classList.toggle('light');
+			});
+		}
+
 });	
 	

@@ -1053,8 +1053,8 @@ body {
   --card-hover-box-shadow-2-blur: 25px;
   --card-hover-icon-color: #d92cf9;
   --card-hover-icon-background-color: #da2cf933;
-  --card-hover-icon-border-color: #490355(52, 211, 153, 0.2);
-  --card-hover-icon1-border-color: #490355(52, 211, 153, 0.2);
+  --card-hover-icon-border-color: #490355;
+  --card-hover-icon1-border-color: #490355;
   --blur-opacity: 0.01;
 
   &.light {
