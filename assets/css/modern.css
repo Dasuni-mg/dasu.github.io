@@ -61,6 +61,21 @@
 /* ========================================
    RESET & BASE
    ======================================== */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--blue-600);
+    color: white;
+    padding: 8px;
+    z-index: 2000;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
 *, *::before, *::after {
     margin: 0;
     padding: 0;

@@ -19,6 +19,7 @@
 </head>
 
 <body>
+    <a href="#home" class="skip-link">Skip to Content</a>
 
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
@@ -32,7 +33,7 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -515,14 +516,22 @@
             const navOverlay = document.getElementById('navOverlay');
 
             function toggleMenu() {
-                hamburger.classList.toggle('active');
+                const isActive = hamburger.classList.toggle('active');
                 navLinks.classList.toggle('active');
                 navOverlay.classList.toggle('active');
-                document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+                hamburger.setAttribute('aria-expanded', isActive);
+                document.body.style.overflow = isActive ? 'hidden' : '';
             }
 
             hamburger.addEventListener('click', toggleMenu);
             navOverlay.addEventListener('click', toggleMenu);
+
+            // Close menu on Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+                    toggleMenu();
+                }
+            });
 
             // Close menu on link click
             navLinks.querySelectorAll('a').forEach(link => {
@@ -696,6 +705,20 @@
             scrollTopBtn.addEventListener('click', () => {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
+
+            // ----- Contact Form Submission -----
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function () {
+                    const submitBtn = this.querySelector('.btn-submit');
+                    const originalContent = submitBtn.innerHTML;
+                    submitBtn.disabled = true;
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin" style="margin-right: 0.5rem;"></i>Sending...';
+
+                    // Note: Form will submit naturally to formsubmit.co
+                    // We don't need to prevent default as we want the redirect/success page from the provider
+                });
+            }
 
             // ----- Tilt effect on AI tool cards -----
             document.querySelectorAll('.ai-tool-card').forEach(card => {
