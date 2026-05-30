@@ -1546,6 +1546,41 @@ footer {
 }
 
 /* ========================================
+   ACCESSIBILITY
+   ======================================== */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    background: var(--blue-600);
+    color: white;
+    padding: 1rem 2rem;
+    z-index: 2000;
+    transition: top 0.3s var(--ease);
+    font-weight: 700;
+    border-radius: 0 0 var(--radius-md) 0;
+    box-shadow: var(--shadow-lg);
+}
+
+.skip-link:focus {
+    top: 0;
+    outline: 2px solid white;
+    outline-offset: -4px;
+}
+
+/* ========================================
    SCROLLBAR
    ======================================== */
 ::-webkit-scrollbar {

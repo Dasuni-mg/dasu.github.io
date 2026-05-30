@@ -1,0 +1,12 @@
+__pycache__/
+.pytest_cache/
+*.pyc
+.DS_Store
+node_modules/
+dist/
+.env
+*.log
+screenshot.png
+skip_link.png
+mobile_menu.png
+/home/jules/verification/
