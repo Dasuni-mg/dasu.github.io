@@ -19,6 +19,7 @@
 </head>
 
 <body>
+    <a href="#home" class="skip-link">Skip to main content</a>
 
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
@@ -32,7 +33,7 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -42,7 +43,7 @@
     <div class="nav-overlay" id="navOverlay"></div>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section id="home" class="hero" tabindex="-1">
         <canvas id="particleCanvas" class="hero-particles"></canvas>
         <div class="container">
             <div class="hero-content">
@@ -515,14 +516,28 @@
             const navOverlay = document.getElementById('navOverlay');
 
             function toggleMenu() {
+                const isActive = !hamburger.classList.contains('active');
                 hamburger.classList.toggle('active');
                 navLinks.classList.toggle('active');
                 navOverlay.classList.toggle('active');
-                document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+                hamburger.setAttribute('aria-expanded', isActive);
+                document.body.style.overflow = isActive ? 'hidden' : '';
+
+                if (isActive) {
+                    const firstLink = navLinks.querySelector('a');
+                    if (firstLink) setTimeout(() => firstLink.focus(), 400);
+                }
             }
 
             hamburger.addEventListener('click', toggleMenu);
             navOverlay.addEventListener('click', toggleMenu);
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+                    toggleMenu();
+                    hamburger.focus();
+                }
+            });
 
             // Close menu on link click
             navLinks.querySelectorAll('a').forEach(link => {
