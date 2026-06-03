@@ -713,6 +713,18 @@
                     card.style.transform = 'perspective(600px) rotateX(0) rotateY(0) translateY(0)';
                 });
             });
+
+            // ----- Contact Form Feedback -----
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function () {
+                    const submitBtn = this.querySelector('.btn-submit');
+                    if (submitBtn) {
+                        submitBtn.disabled = true;
+                        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin" style="margin-right: 0.5rem;"></i>Sending...';
+                    }
+                });
+            }
         });
     </script>
 </body>
