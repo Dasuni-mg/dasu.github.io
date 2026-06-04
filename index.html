@@ -32,7 +32,7 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -518,7 +518,9 @@
                 hamburger.classList.toggle('active');
                 navLinks.classList.toggle('active');
                 navOverlay.classList.toggle('active');
-                document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+                const isActive = navLinks.classList.contains('active');
+                document.body.style.overflow = isActive ? 'hidden' : '';
+                hamburger.setAttribute('aria-expanded', isActive);
             }
 
             hamburger.addEventListener('click', toggleMenu);
