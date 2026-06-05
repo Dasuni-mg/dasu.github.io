@@ -1,0 +1,3 @@
+## 2025-05-14 - [Skip Link Implementation]
+**Learning:** A "Skip to Content" link is a fundamental accessibility requirement for keyboard users to bypass repetitive navigation. It ensures that the first interactive element on the page allows users to reach the primary content immediately, which is especially critical on single-page applications or sites with large headers.
+**Action:** Always verify the presence of a Skip Link and semantic `<main>` landmark during the initial audit of any web interface. Ensure a `.sr-only` utility is available in the design system to support visually-hidden but accessible elements.
