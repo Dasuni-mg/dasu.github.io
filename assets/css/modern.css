@@ -1574,6 +1574,37 @@ footer {
     border-radius: 4px;
 }
 
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.skip-link {
+    position: fixed;
+    top: -100px;
+    left: 2rem;
+    background: var(--accent);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    z-index: 2000;
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+    font-weight: 700;
+    transition: top 0.3s var(--ease);
+    box-shadow: var(--shadow-lg);
+}
+
+.skip-link:focus {
+    top: 0;
+    outline: none;
+}
+
 /* ========================================
    LOADING / PAGE ENTER ANIMATION
    ======================================== */
