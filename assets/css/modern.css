@@ -1566,6 +1566,26 @@ footer {
 }
 
 /* ========================================
+   ACCESSIBILITY UTILITIES
+    position: absolute;
+    top: -100px;
+    left: 0;
+    background: var(--accent);
+    color: #fff;
+    padding: 1rem 1.5rem;
+    z-index: 2000;
+    transition: top 0.3s var(--ease);
+    font-weight: 700;
+    border-radius: 0 0 var(--radius-md) 0;
+    box-shadow: var(--shadow-lg);
+}
+
+.skip-link:focus {
+    top: 0;
+    outline: none;
+}
+
+/* ========================================
    FOCUS STYLES — Accessibility
    ======================================== */
 :focus-visible {
@@ -1594,4 +1614,3 @@ footer {
 
 .hero-image-container {
     animation: slideUp 0.8s var(--ease) 0.3s both;
-}
