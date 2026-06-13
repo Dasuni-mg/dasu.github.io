@@ -1595,3 +1595,37 @@ footer {
 .hero-image-container {
     animation: slideUp 0.8s var(--ease) 0.3s both;
 }
+
+/* ========================================
+   ACCESSIBILITY UTILITIES
+   ======================================== */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 2rem;
+    background: var(--blue-600);
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+    z-index: 2000;
+    transition: top 0.3s var(--ease);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    top: 0;
+    outline: none;
+}
