@@ -1,0 +1,3 @@
+## 2025-05-14 - [Skip Link Implementation & Testing]
+**Learning:** In applications with sticky navbars, automated testing for "Skip to content" links should prioritize keyboard navigation (e.g., `Tab` and `Enter`) over mouse clicks, as the navbar might visually or physically overlap the link's focus position. Setting `tabindex="-1"` on the `<main>` target is crucial for ensuring focus is programmatically shifted and highlighted in all browsers.
+**Action:** Use keyboard interaction simulation in Playwright for skip link verification to accurately reflect screen reader and keyboard-only user behavior, and always ensure the target has `tabindex="-1"`.
