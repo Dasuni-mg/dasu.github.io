@@ -1574,6 +1574,26 @@ footer {
     border-radius: 4px;
 }
 
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 2rem;
+    background: var(--accent);
+    color: #fff !important;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+    font-weight: 600;
+    font-size: 0.9rem;
+    z-index: 2000;
+    transition: top 0.3s var(--ease);
+    box-shadow: var(--shadow-lg);
+}
+
+.skip-link:focus {
+    top: 0;
+    outline: none;
+}
+
 /* ========================================
    LOADING / PAGE ENTER ANIMATION
    ======================================== */
