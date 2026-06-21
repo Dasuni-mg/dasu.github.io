@@ -1574,6 +1574,30 @@ footer {
     border-radius: 4px;
 }
 
+/* Skip Link */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 1rem;
+    background: var(--accent);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    z-index: 2000;
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+    font-weight: 600;
+    transition: top 0.3s var(--ease);
+}
+
+.skip-link:focus {
+    top: 0;
+    outline: 3px solid white;
+    outline-offset: -5px;
+}
+
+#main-content:focus {
+    outline: none;
+}
+
 /* ========================================
    LOADING / PAGE ENTER ANIMATION
    ======================================== */
