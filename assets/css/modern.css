@@ -81,6 +81,27 @@ body {
     overflow-x: hidden;
 }
 
+/* Skip to Content */
+.skip-link {
+    position: fixed;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--blue-600);
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    z-index: 2000;
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+    font-weight: 700;
+    transition: top 0.3s var(--ease);
+    box-shadow: var(--shadow-lg);
+}
+
+.skip-link:focus {
+    top: 0;
+    outline: none;
+}
+
 ::selection {
     background: rgba(59, 130, 246, 0.4);
     color: #fff;
