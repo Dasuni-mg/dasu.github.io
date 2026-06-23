@@ -19,6 +19,7 @@
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link">Skip to Content</a>
 
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
@@ -41,8 +42,9 @@
     </nav>
     <div class="nav-overlay" id="navOverlay"></div>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
+    <main id="main-content" tabindex="-1">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
         <canvas id="particleCanvas" class="hero-particles"></canvas>
         <div class="container">
             <div class="hero-content">
@@ -463,7 +465,8 @@
                 </div>
             </div>
         </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Scroll to Top -->
     <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
