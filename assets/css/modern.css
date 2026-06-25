@@ -1574,6 +1574,41 @@ footer {
     border-radius: 4px;
 }
 
+/* Screen reader only utility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Show sr-only element on focus (for skip links) */
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+    position: fixed;
+    width: auto;
+    height: auto;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1rem 1.5rem;
+    background: var(--bg-surface);
+    color: var(--accent);
+    border: 2px solid var(--accent);
+    border-radius: var(--radius-md);
+    z-index: 2000;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+    box-shadow: var(--shadow-xl);
+    text-decoration: none;
+}
+
 /* ========================================
    LOADING / PAGE ENTER ANIMATION
    ======================================== */
