@@ -19,6 +19,7 @@
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
@@ -41,8 +42,9 @@
     </nav>
     <div class="nav-overlay" id="navOverlay"></div>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
+    <main id="main-content" tabindex="-1">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
         <canvas id="particleCanvas" class="hero-particles"></canvas>
         <div class="container">
             <div class="hero-content">
@@ -73,10 +75,10 @@
                                 class="hero-stat-label">Companies</span></div>
                     </div>
                     <div class="social-links">
-                        <a href="https://github.com/Dasuni-mg" target="_blank" aria-label="GitHub"><i
-                                class="fab fa-github"></i></a>
+                        <a href="https://github.com/Dasuni-mg" target="_blank" rel="noopener noreferrer"
+                            aria-label="GitHub"><i class="fab fa-github"></i></a>
                         <a href="https://www.linkedin.com/in/dasuninuwanika-3943241b4/" target="_blank"
-                            aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                         <a href="mailto:mg.dasuninuwanika@gmail.com" aria-label="Email"><i
                                 class="fas fa-envelope"></i></a>
                     </div>
@@ -452,10 +454,10 @@
                     <div class="contact-socials">
                         <h4>Follow Me</h4>
                         <div class="social-links">
-                            <a href="https://github.com/Dasuni-mg" target="_blank" aria-label="GitHub"><i
-                                    class="fab fa-github"></i></a>
+                            <a href="https://github.com/Dasuni-mg" target="_blank" rel="noopener noreferrer"
+                                aria-label="GitHub"><i class="fab fa-github"></i></a>
                             <a href="https://www.linkedin.com/in/dasuninuwanika-3943241b4/" target="_blank"
-                                aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                             <a href="mailto:mg.dasuninuwanika@gmail.com" aria-label="Email"><i
                                     class="fas fa-envelope"></i></a>
                         </div>
@@ -464,6 +466,7 @@
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Scroll to Top -->
     <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
@@ -548,8 +551,10 @@
 
                 navItems.forEach(item => {
                     item.classList.remove('active');
+                    item.removeAttribute('aria-current');
                     if (item.getAttribute('href') === '#' + current) {
                         item.classList.add('active');
+                        item.setAttribute('aria-current', 'page');
                     }
                 });
             });
