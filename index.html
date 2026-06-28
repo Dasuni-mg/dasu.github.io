@@ -19,6 +19,10 @@
 </head>
 
 <body>
+    <a class="sr-only sr-only-focusable" href="#main-content"
+        style="position: absolute; top: 1rem; left: 1rem; z-index: 2000; background: var(--bg-surface); padding: 0.75rem 1.5rem; border-radius: var(--radius-md); color: var(--accent); border: 1px solid var(--accent); text-decoration: none;">
+        Skip to main content
+    </a>
 
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
@@ -41,6 +45,7 @@
     </nav>
     <div class="nav-overlay" id="navOverlay"></div>
 
+    <main id="main-content" tabindex="-1">
     <!-- Hero Section -->
     <section id="home" class="hero">
         <canvas id="particleCanvas" class="hero-particles"></canvas>
@@ -464,6 +469,7 @@
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Scroll to Top -->
     <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
