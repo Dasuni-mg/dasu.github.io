@@ -1403,12 +1403,14 @@ footer {
         justify-content: center;
         align-items: center;
         gap: 0.5rem;
-        transition: right 0.4s var(--ease);
+        transition: right 0.4s var(--ease), visibility 0.4s var(--ease);
         box-shadow: -10px 0 40px rgba(0, 0, 0, 0.4);
+        visibility: hidden;
     }
 
     .nav-links.active {
         right: 0;
+        visibility: visible;
     }
 
     .nav-links a {
