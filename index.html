@@ -19,6 +19,7 @@
 </head>
 
 <body>
+    <a href="#main-content" class="sr-only sr-only-focusable">Skip to content</a>
 
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
@@ -32,7 +33,7 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+            <button class="hamburger" id="hamburger" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -41,6 +42,7 @@
     </nav>
     <div class="nav-overlay" id="navOverlay"></div>
 
+    <main id="main-content" tabindex="-1">
     <!-- Hero Section -->
     <section id="home" class="hero">
         <canvas id="particleCanvas" class="hero-particles"></canvas>
@@ -465,6 +467,8 @@
         </div>
     </section>
 
+    </main>
+
     <!-- Scroll to Top -->
     <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
         <i class="fas fa-arrow-up"></i>
@@ -515,14 +519,22 @@
             const navOverlay = document.getElementById('navOverlay');
 
             function toggleMenu() {
-                hamburger.classList.toggle('active');
+                const isActive = hamburger.classList.toggle('active');
                 navLinks.classList.toggle('active');
                 navOverlay.classList.toggle('active');
-                document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+                hamburger.setAttribute('aria-expanded', isActive);
+                document.body.style.overflow = isActive ? 'hidden' : '';
             }
 
             hamburger.addEventListener('click', toggleMenu);
             navOverlay.addEventListener('click', toggleMenu);
+
+            // Close menu on Escape key
+            window.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+                    toggleMenu();
+                }
+            });
 
             // Close menu on link click
             navLinks.querySelectorAll('a').forEach(link => {
