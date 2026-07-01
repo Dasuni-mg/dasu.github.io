@@ -19,6 +19,7 @@
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link sr-only sr-only-focusable">Skip to content</a>
 
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
@@ -32,7 +33,7 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -52,7 +53,7 @@
                     <h3 class="hero-subtitle">Hello, I'm</h3>
                     <h1 class="hero-title">Dasuni Nuwanika</h1>
                     <h2 class="hero-role" id="typedRole">
-                        <span class="typed-text"></span><span class="typed-cursor">|</span>
+                        <span class="typed-text"></span><span class="typed-cursor" aria-hidden="true">|</span>
                     </h2>
                     <h2 style="display:none;">Portfolio</h2>
                     <p class="hero-desc">
@@ -90,6 +91,8 @@
             </div>
         </div>
     </section>
+
+    <main id="main-content" tabindex="-1">
 
     <!-- About Section -->
     <section id="about">
@@ -272,7 +275,6 @@
             </div>
         </div>
     </section>
-
     <!-- Experience Section -->
     <section id="experience">
         <div class="container">
@@ -331,7 +333,6 @@
             </div>
         </div>
     </section>
-
     <!-- Projects & Certifications -->
     <section id="projects" class="bg-white">
         <div class="container">
@@ -382,7 +383,6 @@
             </div>
         </div>
     </section>
-
     <!-- Contact Section -->
     <section id="contact">
         <div class="container">
@@ -465,6 +465,8 @@
         </div>
     </section>
 
+    </main>
+
     <!-- Scroll to Top -->
     <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
         <i class="fas fa-arrow-up"></i>
@@ -518,11 +520,20 @@
                 hamburger.classList.toggle('active');
                 navLinks.classList.toggle('active');
                 navOverlay.classList.toggle('active');
-                document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+                const isActive = navLinks.classList.contains('active');
+                hamburger.setAttribute('aria-expanded', isActive);
+                document.body.style.overflow = isActive ? 'hidden' : '';
             }
 
             hamburger.addEventListener('click', toggleMenu);
             navOverlay.addEventListener('click', toggleMenu);
+
+            // Close menu on Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+                    toggleMenu();
+                }
+            });
 
             // Close menu on link click
             navLinks.querySelectorAll('a').forEach(link => {
