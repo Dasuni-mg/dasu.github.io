@@ -19,6 +19,7 @@
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
@@ -41,18 +42,20 @@
     </nav>
     <div class="nav-overlay" id="navOverlay"></div>
 
+    <main id="main-content" tabindex="-1">
+
     <!-- Hero Section -->
     <section id="home" class="hero">
         <canvas id="particleCanvas" class="hero-particles"></canvas>
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text fade-in">
-                    <div class="hero-badge"><i class="fas fa-circle" style="font-size: 6px; color: #22c55e;"></i>
+                    <div class="hero-badge"><i class="fas fa-circle" style="font-size: 6px; color: #22c55e;" aria-hidden="true"></i>
                         Available for work</div>
                     <h3 class="hero-subtitle">Hello, I'm</h3>
                     <h1 class="hero-title">Dasuni Nuwanika</h1>
                     <h2 class="hero-role" id="typedRole">
-                        <span class="typed-text"></span><span class="typed-cursor">|</span>
+                        <span class="typed-text"></span><span class="typed-cursor" aria-hidden="true">|</span>
                     </h2>
                     <h2 style="display:none;">Portfolio</h2>
                     <p class="hero-desc">
@@ -60,9 +63,9 @@
                     </p>
                     <div class="hero-cta">
                         <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"
-                                style="margin-right: 0.5rem;"></i>Hire Me</a>
+                                style="margin-right: 0.5rem;" aria-hidden="true"></i>Hire Me</a>
                         <a href="assets/M.G Dasuni Nuwanika.pdf" download class="btn btn-outline"><i
-                                class="fas fa-download" style="margin-right: 0.5rem;"></i>Download CV</a>
+                                class="fas fa-download" style="margin-right: 0.5rem;" aria-hidden="true"></i>Download CV</a>
                     </div>
                     <div class="hero-stats">
                         <div class="hero-stat"><span class="hero-stat-num" data-count="3">0</span>+<span
@@ -74,11 +77,11 @@
                     </div>
                     <div class="social-links">
                         <a href="https://github.com/Dasuni-mg" target="_blank" aria-label="GitHub"><i
-                                class="fab fa-github"></i></a>
+                                class="fab fa-github" aria-hidden="true"></i></a>
                         <a href="https://www.linkedin.com/in/dasuninuwanika-3943241b4/" target="_blank"
-                            aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
                         <a href="mailto:mg.dasuninuwanika@gmail.com" aria-label="Email"><i
-                                class="fas fa-envelope"></i></a>
+                                class="fas fa-envelope" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <div class="hero-image-container fade-in">
@@ -394,7 +397,7 @@
             <div class="contact-grid fade-in">
                 <!-- Contact Form -->
                 <div class="contact-form-card">
-                    <h3 class="contact-form-title"><i class="fas fa-paper-plane"></i> Send a Message</h3>
+                    <h3 class="contact-form-title"><i class="fas fa-paper-plane" aria-hidden="true"></i> Send a Message</h3>
                     <form id="contactForm" class="contact-form"
                         action="https://formsubmit.co/mg.dasuninuwanika@gmail.com" method="POST">
                         <input type="hidden" name="_captcha" value="false">
@@ -417,31 +420,31 @@
                                 required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary btn-submit">
-                            <i class="fas fa-paper-plane" style="margin-right: 0.5rem;"></i>Send Message
+                            <i class="fas fa-paper-plane" style="margin-right: 0.5rem;" aria-hidden="true"></i>Send Message
                         </button>
                     </form>
                 </div>
 
                 <!-- Contact Info -->
                 <div class="contact-info-side">
-                    <h3 class="contact-form-title"><i class="fas fa-address-card"></i> Contact Info</h3>
+                    <h3 class="contact-form-title"><i class="fas fa-address-card" aria-hidden="true"></i> Contact Info</h3>
                     <div class="contact-info-list">
                         <a href="tel:0768354408" class="contact-info-item">
-                            <div class="contact-info-icon"><i class="fas fa-phone"></i></div>
+                            <div class="contact-info-icon"><i class="fas fa-phone" aria-hidden="true"></i></div>
                             <div class="contact-info-text">
                                 <span class="contact-info-label">Phone</span>
                                 <span class="contact-info-value">076 835 4408</span>
                             </div>
                         </a>
                         <a href="mailto:mg.dasuninuwanika@gmail.com" class="contact-info-item">
-                            <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="contact-info-icon"><i class="fas fa-envelope" aria-hidden="true"></i></div>
                             <div class="contact-info-text">
                                 <span class="contact-info-label">Email</span>
                                 <span class="contact-info-value">mg.dasuninuwanika@gmail.com</span>
                             </div>
                         </a>
                         <div class="contact-info-item">
-                            <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="contact-info-icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></div>
                             <div class="contact-info-text">
                                 <span class="contact-info-label">Location</span>
                                 <span class="contact-info-value">Hokandara, Sri Lanka</span>
@@ -453,17 +456,19 @@
                         <h4>Follow Me</h4>
                         <div class="social-links">
                             <a href="https://github.com/Dasuni-mg" target="_blank" aria-label="GitHub"><i
-                                    class="fab fa-github"></i></a>
+                                    class="fab fa-github" aria-hidden="true"></i></a>
                             <a href="https://www.linkedin.com/in/dasuninuwanika-3943241b4/" target="_blank"
-                                aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
                             <a href="mailto:mg.dasuninuwanika@gmail.com" aria-label="Email"><i
-                                    class="fas fa-envelope"></i></a>
+                                    class="fas fa-envelope" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    </main>
 
     <!-- Scroll to Top -->
     <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
