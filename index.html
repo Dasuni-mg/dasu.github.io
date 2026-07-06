@@ -32,7 +32,7 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+            <button class="hamburger" id="hamburger" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -47,7 +47,7 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text fade-in">
-                    <div class="hero-badge"><i class="fas fa-circle" style="font-size: 6px; color: #22c55e;"></i>
+                    <div class="hero-badge"><i class="fas fa-circle" style="font-size: 6px; color: #22c55e;" aria-hidden="true"></i>
                         Available for work</div>
                     <h3 class="hero-subtitle">Hello, I'm</h3>
                     <h1 class="hero-title">Dasuni Nuwanika</h1>
@@ -417,7 +417,7 @@
                                 required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary btn-submit">
-                            <i class="fas fa-paper-plane" style="margin-right: 0.5rem;"></i>Send Message
+                            <i class="fas fa-paper-plane" style="margin-right: 0.5rem;" aria-hidden="true"></i>Send Message
                         </button>
                     </form>
                 </div>
@@ -518,11 +518,20 @@
                 hamburger.classList.toggle('active');
                 navLinks.classList.toggle('active');
                 navOverlay.classList.toggle('active');
-                document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+                const isOpen = navLinks.classList.contains('active');
+                hamburger.setAttribute('aria-expanded', isOpen);
+                document.body.style.overflow = isOpen ? 'hidden' : '';
             }
 
             hamburger.addEventListener('click', toggleMenu);
             navOverlay.addEventListener('click', toggleMenu);
+
+            // Close menu on Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+                    toggleMenu();
+                }
+            });
 
             // Close menu on link click
             navLinks.querySelectorAll('a').forEach(link => {
