@@ -19,6 +19,7 @@
 </head>
 
 <body>
+    <a href="#main-content" class="sr-only sr-only-focusable">Skip to content</a>
 
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
@@ -32,7 +33,7 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" type="button" aria-expanded="false" aria-controls="navLinks">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -41,18 +42,19 @@
     </nav>
     <div class="nav-overlay" id="navOverlay"></div>
 
+    <main id="main-content" tabindex="-1">
     <!-- Hero Section -->
     <section id="home" class="hero">
         <canvas id="particleCanvas" class="hero-particles"></canvas>
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text fade-in">
-                    <div class="hero-badge"><i class="fas fa-circle" style="font-size: 6px; color: #22c55e;"></i>
+                    <div class="hero-badge"><i class="fas fa-circle" aria-hidden="true" style="font-size: 6px; color: #22c55e;"></i>
                         Available for work</div>
                     <h3 class="hero-subtitle">Hello, I'm</h3>
                     <h1 class="hero-title">Dasuni Nuwanika</h1>
                     <h2 class="hero-role" id="typedRole">
-                        <span class="typed-text"></span><span class="typed-cursor">|</span>
+                        <span class="typed-text"></span><span class="typed-cursor" aria-hidden="true">|</span>
                     </h2>
                     <h2 style="display:none;">Portfolio</h2>
                     <p class="hero-desc">
@@ -74,11 +76,11 @@
                     </div>
                     <div class="social-links">
                         <a href="https://github.com/Dasuni-mg" target="_blank" aria-label="GitHub"><i
-                                class="fab fa-github"></i></a>
+                                class="fab fa-github" aria-hidden="true"></i></a>
                         <a href="https://www.linkedin.com/in/dasuninuwanika-3943241b4/" target="_blank"
-                            aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
                         <a href="mailto:mg.dasuninuwanika@gmail.com" aria-label="Email"><i
-                                class="fas fa-envelope"></i></a>
+                                class="fas fa-envelope" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <div class="hero-image-container fade-in">
@@ -210,7 +212,7 @@
 
                     <!-- Cursor -->
                     <div class="ai-tool-card fade-in">
-                        <div class="ai-tool-logo">
+                        <div class="ai-tool-logo" aria-hidden="true">
                             <img src="./assets/images/ai/cursor.png" alt="Cursor"/>
                         </div>
                         <h4 class="ai-tool-name">Cursor</h4>
@@ -220,7 +222,7 @@
 
                     <!-- Claude -->
                     <div class="ai-tool-card fade-in">
-                        <div class="ai-tool-logo">
+                        <div class="ai-tool-logo" aria-hidden="true">
                             <img src="./assets/images/ai/claude.png" alt="Claude"/>
                         </div>
                         <h4 class="ai-tool-name">Claude</h4>
@@ -230,7 +232,7 @@
 
                     <!-- Google Gemini -->
                     <div class="ai-tool-card fade-in">
-                        <div class="ai-tool-logo">
+                        <div class="ai-tool-logo" aria-hidden="true">
                             <img src="./assets/images/ai/gemini.webp" alt="Google Gemini"/>
                         </div>
                         <h4 class="ai-tool-name">Google Gemini</h4>
@@ -240,7 +242,7 @@
 
                     <!-- Google Jules -->
                     <div class="ai-tool-card fade-in">
-                        <div class="ai-tool-logo">
+                        <div class="ai-tool-logo" aria-hidden="true">
                             <img src="./assets/images/ai/jules.jfif" alt="Google Jules"/>
                         </div>
                         <h4 class="ai-tool-name">Google Jules</h4>
@@ -250,7 +252,7 @@
 
                     <!-- Perplexity -->
                     <div class="ai-tool-card fade-in">
-                        <div class="ai-tool-logo">
+                        <div class="ai-tool-logo" aria-hidden="true">
                             <img src="./assets/images/ai/per.jfif" alt="Perplexity"/>
                         </div>
                         <h4 class="ai-tool-name">Perplexity</h4>
@@ -260,7 +262,7 @@
 
                     <!-- ChatGPT -->
                     <div class="ai-tool-card fade-in">
-                        <div class="ai-tool-logo">
+                        <div class="ai-tool-logo" aria-hidden="true">
                             <img src="./assets/images/ai/chat.webp" alt="ChatGPT"/>
                         </div>
                         <h4 class="ai-tool-name">ChatGPT</h4>
@@ -341,17 +343,17 @@
                     <h2 class="fade-in" style="text-align: left;">Projects</h2>
                     <div style="display: flex; flex-direction: column; gap: 1.5rem;">
                         <div class="card fade-in">
-                            <i class="fas fa-vial card-icon"></i>
+                    <i class="fas fa-vial card-icon" aria-hidden="true"></i>
                             <h3 class="card-title">Selenium + Java Automation</h3>
                             <p class="card-desc">EZ Cart E-commerce Website automation framework and testing.</p>
                         </div>
                         <div class="card fade-in">
-                            <i class="fas fa-play card-icon"></i>
+                    <i class="fas fa-play card-icon" aria-hidden="true"></i>
                             <h3 class="card-title">Playwright + JavaScript Automation</h3>
                             <p class="card-desc">End-to-end UI testing for SauceDemo Website.</p>
                         </div>
                         <div class="card fade-in">
-                            <i class="fas fa-server card-icon"></i>
+                    <i class="fas fa-server card-icon" aria-hidden="true"></i>
                             <h3 class="card-title">Playwright API Automation</h3>
                             <p class="card-desc">Comprehensive API testing for Weprint E-commerce website.</p>
                         </div>
@@ -464,6 +466,7 @@
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Scroll to Top -->
     <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
@@ -518,8 +521,17 @@
                 hamburger.classList.toggle('active');
                 navLinks.classList.toggle('active');
                 navOverlay.classList.toggle('active');
-                document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+                const isActive = navLinks.classList.contains('active');
+                hamburger.setAttribute('aria-expanded', isActive);
+                document.body.style.overflow = isActive ? 'hidden' : '';
             }
+
+            // Close menu on Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+                    toggleMenu();
+                }
+            });
 
             hamburger.addEventListener('click', toggleMenu);
             navOverlay.addEventListener('click', toggleMenu);
