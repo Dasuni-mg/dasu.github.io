@@ -1,0 +1,3 @@
+## 2025-07-08 - Accessible Mobile Navigation Focus Management
+**Learning:** Off-screen navigation menus can still receive keyboard focus if they are only hidden using positioning (like `right: -100%`). To properly manage focus for accessibility, the menu should also use `visibility: hidden` when inactive. This ensures screen readers and keyboard users don't "ghost focus" on elements they cannot see.
+**Action:** Always combine positioning transitions with `visibility` in mobile menu components. When transitioning `visibility`, it waits for the animation to finish before hiding the element from the accessibility tree, maintaining smooth animations while ensuring focus safety.
